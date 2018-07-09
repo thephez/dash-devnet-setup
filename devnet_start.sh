@@ -22,14 +22,16 @@ echo "addnode=$NODE" >> devnet-$DEVNET_NAME.conf
 
 
 CONF_FILE=$(pwd)/devnet-$DEVNET_NAME.conf
-echo $CONF_FILE
+echo "Using config file: $CONF_FILE"
 
 ~/dashcore-0.12.3/bin/dashd -conf=$CONF_FILE &
 
 echo "Waiting for dashd to start..."
-sleep 5
+sleep 3
 
+# Next line manually adds a node via dash-cli
 #~/dashcore-0.12.3/bin/dash-cli -conf=$CONF_FILE addnode "devnet.thephez.com:19999" "add"
 ~/dashcore-0.12.3/bin/dash-cli -conf=$CONF_FILE getinfo
 
+# View/follow the debug.log file
 tail -f ~/.dashcore/devnet-$DEVNET_NAME/debug.log

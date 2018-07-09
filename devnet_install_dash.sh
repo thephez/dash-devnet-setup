@@ -6,6 +6,6 @@ cd
 curl -L -O https://github.com/dashpay/dash/releases/download/v0.12.3.2/$DCFILE
 
 tar -xvzf $DCFILE
-ls dash*
 
+# Change directory back to original location
 cd $DIR
