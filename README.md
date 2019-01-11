@@ -1,3 +1,5 @@
+# NOTE: The devnet referenced in the example config is no longer running. Please use this as an example only.
+
 # dash-devnet-setup
 Basic example of setting up a Dash devnet via script
 
